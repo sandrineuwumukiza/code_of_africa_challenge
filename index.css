@@ -1,0 +1,92 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px;
+    justify-content: center;
+    margin: 30px;
+    
+}
+
+.image-cards {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    width: calc(23% - 10px); 
+    height: 80vh;
+   
+}
+.image-cards:hover {
+   opacity: 1;
+   transition: 0.6s;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 80vh;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.photo-gallery .image-cards:hover img {
+    transform: scale(1.1);
+    opacity: 0.2;
+}
+.content {
+    position: absolute;
+    bottom: 8%;
+    left: 12%;
+    color: white;
+}
+
+.photo-gallery .image-cards a {
+    text-decoration: none;
+    color: aqua;
+    display: inline-flex;
+    position: absolute;
+    align-items: center;
+    opacity: 0;
+    bottom:5%;
+    left: 12%;
+    transition: opacity 0.6s;
+}
+
+.photo-gallery .content a i {
+    font-size: 1.8rem;
+    
+}
+
+.photo-gallery .image-cards .content > * {
+    transform: translateY(25px);
+    transition: transform 0.6s;
+}
+
+.photo-gallery .image-cards:hover .content > * {
+    transform: translateY(0px);
+    transition: transform 0.6s;
+}
+
+@media (max-width:768px) {
+    .photo-gallery .image-cards {
+        width: calc(50% - 16px); 
+    }
+    .content {
+        bottom: 17%;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-gallery .image-cards {
+        width: 100%;
+    }
+    .content {
+        bottom: 17%;
+    }
+}
