@@ -11,16 +11,19 @@ body {
     flex-wrap: wrap;
     padding: 16px;
     justify-content: center;
-    margin: 30px;
-    
+    top:608px;
+    gap: 2px;
+    left: -355px;
+   
 }
 
 .image-cards {
     position: relative;
     overflow: hidden;
     margin: 0;
-    width: calc(23% - 10px); 
-    height: 80vh;
+    width: 293px; 
+    height: 588px;
+    gap:8px
    
 }
 .image-cards:hover {
@@ -43,9 +46,26 @@ body {
     position: absolute;
     bottom: 8%;
     left: 12%;
-    color: white;
+    color: #FFFFFF;
 }
 
+.content h1{
+size: 38px;
+font-family: "DIN Condensed";
+font-weight: 700;
+/* line-height: 38px; */
+width: 213px;
+/* height: 16px; */
+}
+.content p{
+    size: 12px;
+    font-family: "Poppins";
+    font-weight: 400;
+    /* line-height: 16.02px; */
+    width: 213px;
+    height: 16px;  
+    opacity: 70%;
+}
 .photo-gallery .image-cards a {
     text-decoration: none;
     color: aqua;
